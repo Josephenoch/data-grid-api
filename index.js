@@ -1,4 +1,5 @@
 require('dotenv').config()
+require("./db/mongodb")
 
 const express = require('express')
 const app = express()
@@ -10,7 +11,6 @@ app.use(express.json())
 app.use(cors())
 app.use(morgan("tiny"))
 
-require("./db/mongodb")
 
 
 // Controllers and routes 
